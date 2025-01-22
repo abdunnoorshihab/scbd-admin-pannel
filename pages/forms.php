@@ -936,8 +936,10 @@
                           </div>
                       </div>
 
-                      <!-- Status Section -->
-                        <div class="mb-4">
+                          
+                        <div class="d-flex justify-content-between align-items-center">
+                          <!-- Status Section -->
+                          <div class="my-4">
                           <h2 class="h5 mb-3">Status</h2>
                           <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" id="radio-active" name="status" value="active" checked>
@@ -947,7 +949,19 @@
                             <input class="form-check-input" type="radio" id="radio-inactive" name="status" value="inactive">
                             <label class="form-check-label" for="radio-inactive">Inactive</label>
                           </div>
+                          </div>
+
+                          <!-- Stakeholder Section -->
+                          <div class="my-4">
+                          <h2 class="h5 mb-3">Stakeholders</h2>
+                          <select class="form-select" id="stakeholders" name="stakeholders">
+                            <option value="action">Action</option>
+                            <option value="another-action">Another action</option>
+                            <option value="something-else">Something else here</option>
+                          </select>
+                          </div>
                         </div>
+
 
                       <!-- Submit Button -->
                       <div class="text-center">
