@@ -16,25 +16,52 @@
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .card {
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .form-control {
-            height: 50px;
-        }
-        textarea.form-control {
-            height: 120px;
-            resize: none;
-        }
-        .content-wrapper {
-    margin-left: 250px; 
-    padding: 20px;
-}
-    </style>
+<style>
+    .content-wrapper {
+      margin-left: 250px; 
+      padding: 20px;
+  }
+</style>
+<style>
+  .hover-bg-light:hover {
+    background-color: #e9ecef !important;
+  }
+
+  .card-body {
+    background-color: #ffffff;
+    border-radius: 15px;
+  }
+
+  .table th, .table td {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .invoice-header div {
+    
+    padding: 15px;
+    
+    
+  }
+
+  .invoice-header h4 {
+    font-size: 18px;
+    color: #333;
+  }
+
+  .invoice-header address {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .table-container {
+  background-color: white;
+  }
+
+</style>
 
 </head>
 
@@ -854,84 +881,89 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <div class="container mt-5">
-        <div class="card p-4">
-            <h2 class="mb-4 text-center text-primary">Gate Pass</h2>
-            <form>
-                
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <label for="deviceType" class="form-label fw-bold">Type</label>
-                        <input list="deviceOptions" class="form-control form-control-lg" id="deviceType" placeholder="Choose or write...">
-                        <datalist id="deviceOptions">
-                            <option value="Laptop"></option>
-                            <option value="Desktop"></option>
-                            <option value="Printer"></option>
-                            <option value="Scanner"></option>
-                        </datalist>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <label for="deviceDescription" class="form-label fw-bold">Description of Items</label>
-                        <input list="descriptionOptions" class="form-control form-control-lg" id="deviceDescription" placeholder="Choose or write...">
-                        <datalist id="descriptionOptions">
-                            <option value="HP -123ijk"></option>
-                            <option value="Dell - 234llk"></option>
-                            <option value="Lenovo -889kkli"></option>
-                            <option value="Scanner"></option>
-                        </datalist>
-                    </div>
-                </div>
+  
+  <div class="content-wrapper" style="background-color: white; min-height: 100vh;">
+  <div class="container my-5">
+    <div class="card shadow-none border-0 rounded-3">
+      <div class="card-body">
 
-                
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <label for="status" class="form-label fw-bold">Status</label>
-                        <textarea class="form-control" id="status" placeholder="Write status..."></textarea>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <label for="remarks" class="form-label fw-bold">Remarks</label>
-                        <textarea class="form-control" id="remarks" placeholder="Write remarks..."></textarea>
-                    </div>
-                </div>
-
-                
-                <div class="mb-4">
-                    <label for="note" class="form-label fw-bold">Note</label>
-                    <input type="text" class="form-control form-control-lg" id="note" placeholder="Write note...">
-                </div>
-
-                
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <label for="devicehandover" class="form-label fw-bold">Handed Over By</label>
-                        <input list="devicehandoverOptions" class="form-control form-control-lg" id="devicehandover" placeholder="Choose or write...">
-                        <datalist id="devicehandoverOptions">
-                            <option value="Liton Majumder"></option>
-                            <option value="Pragati Lahiri"></option>
-                            <option value="Abdun Noor Shihab"></option>
-                        </datalist>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <label for="devicetakeover" class="form-label fw-bold">Take Over By</label>
-                        <input list="takeoverOptionsList" class="form-control form-control-lg" id="devicetakeover" placeholder="Choose or write...">
-                        <datalist id="takeoverOptionsList">
-                            <option value="Vendor 1"></option>
-                            <option value="Vendor 2"></option>
-                            <option value="Vendor 3"></option>
-                            <option value="Vendor 4"></option>
-                        </datalist>
-                    </div>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="d-flex justify-content-center mt-4">
-                    <button type="submit" class="btn btn-primary px-5 py-2 fs-5">Submit</button>
-                </div>
-            </form>
+        <!-- Logo Section -->
+        <div class="row mb-4">
+          <div class="col-12 text-end">
+            <div class="logo">
+              <img src="../dist/img/swisscontact-logo-vector.png" alt="Swisscontact Logo" class="img-fluid" style="max-width: 220px;">
+            </div>
+          </div>
         </div>
+
+        <!-- Title -->
+        <h1 class="text-center mb-4 text-primary">Gate Pass</h1>
+        
+        <hr class="my-4" style="border-top: 2px solid #007bff;">
+
+        <!-- Table Section -->
+        <div class="table-responsive mb-4">
+          <table class="table table-bordered table-hover" style="background-color: white;">
+            <thead class="thead-white">
+              <tr>
+                <th class="text-center">Item Type</th>
+                <th>Description</th>
+                <th class="text-center">Status</th>
+                <th class="text-center">Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">Laptop</td>
+                <td>Dell Vostro 5415 | 2021 Model | 14″ FHD Laptop ( Ryzen 5 5500U, 8GB, 512GB SSD, Intel, W10 )</td>
+                <td class="text-center">Physical Damage</td>
+                <td class="text-center">Send to the service center</td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Information Sections -->
+        <div class="invoice-header d-flex justify-content-between mt-5 p-5" style="background-color: white;">
+          <!-- Requested By Section -->
+          <div class="invoice-from" style="width: 48%;">
+            <h4 class="font-weight-bold text-secondary" style="font-size: 16px;">Requested By</h4>
+            <p style="font-size: 12px;"><strong>Signature:</strong></p>
+            <br>
+            <p style="font-size: 12px;"><strong>Name:</strong> Mr. Ahmed</p>
+            <p style="font-size: 12px;"><strong>Designation:</strong> IT Officer</p>
+            <p style="font-size: 12px;"><strong>Department:</strong> IT</p>
+          </div>
+
+          <!-- Approved By Section -->
+          <div class="invoice-date text-end" style="width: 48%;">
+            <h4 class="font-weight-bold text-secondary" style="font-size: 16px;">Approved By</h4>
+            <p style="font-size: 12px;"><strong>Signature:</strong></p>
+            <br>
+            <p style="font-size: 12px;"><strong>Name:</strong> Mr. Ahmed</p>
+            <p style="font-size: 12px;"><strong>Designation:</strong> IT Officer</p>
+            <p style="font-size: 12px;"><strong>Department:</strong> IT</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+
+
+        <!-- Footer Section -->
+        <div class="text-center mt-5">
+          <p class="text-muted"><strong>Generated on:</strong> January 22, 2025</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Custom CSS for Better Effects -->
+
 
 
 
